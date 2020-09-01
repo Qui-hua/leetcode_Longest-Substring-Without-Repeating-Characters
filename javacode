@@ -1,0 +1,30 @@
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+    /////避免傳來空字串
+    if(s ==null || s.length()==0)
+			return 0;
+      //////如果不是空字串，至少是一個字
+		int max =1;
+		int start =0;
+		for(int i =1 ;i<s.length();i++)
+		{
+			String temp = s.substring(start, i);
+			String check = s.substring(i, i+1);
+      ////如果下一個字是有重複出現在 temp中
+			if(temp.contains(check))
+			{
+        ///將起始位置移動
+				start = temp.indexOf(check)+start+1;
+			}
+			else
+			{
+      //////因為長度每次都會檢查，所以最多只會增加一格長度
+				if(temp.length() ==max)
+				{
+					max++;
+				}
+			}
+		}
+		return max;
+    }
+}
