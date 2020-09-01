@@ -28,3 +28,19 @@ class Solution {
 		return max;
     }
 }
+/**思路
+
+題目是找字串中最大字串內不重複的子字串，所以從頭開始找，紀錄起始位置，從起始位置開始往後檢查新的字元是不是有在字串內，如果就將起始位置改成目前子字串重複的字元位置之後
+
+***/
+
+/*******結果
+
+09/01/2020 09:33	Accepted	8 ms	39.4 MB	java
+09/01/2020 09:33	Accepted	17 ms	50.8 MB	java
+09/01/2020 09:32	Accepted	8 ms	39.9 MB	java
+
+Runtime: 8 ms, faster than 53.30% of Java online submissions for Longest Substring Without Repeating Characters.
+Memory Usage: 39.6 MB, less than 79.80% of Java online submissions for Longest Substring Without Repeating Characters.
+感覺是有一組測資會出現極端情況，讓效能變差，但是想不到原因
+*******/
